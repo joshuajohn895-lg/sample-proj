@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <form name="proposal-response" method="POST" data-netlify="true" hidden>
+  <input type="hidden" name="form-name" value="proposal-response" />
+  <input type="text" name="response" />
+  </form>
 
   <!-- Section 1 -->
   <section class="section active" id="section1">
-    <h1>Hi {{HerName}},</h1>
+    <h1>Hi Sharon,</h1>
     <p>
       I know this might surprise you…  
       But there are feelings in my heart that never truly faded.
@@ -61,11 +65,10 @@
     </p>
 
     <h2>Would you give us a chance? 💍</h2>
-
-    <div class="buttons">
-      <button class="yes" onclick="showYes()">Yes 😍</button>
-      <button class="no" onclick="showNo()">No 🙂</button>
-    </div>
+  <div class="buttons">
+    <button class="yes" onclick="submitResponse('YES')">Yes 😍</button>
+    <button class="no" onclick="submitResponse('NO')">No 🙂</button>
+  </div>
   </section>
 
   <!-- YES Section -->
