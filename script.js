@@ -36,3 +36,4 @@ function showNo() {
   });
   document.getElementById("noSection").classList.add("active");
 }
+
