@@ -5,12 +5,16 @@ function nextSection(number) {
   document.getElementById("section" + number).classList.add("active");
 }
 
-function sayYes() {
-  nextSection(4);
+function showYes() {
+  document.querySelectorAll(".section").forEach(section => {
+    section.classList.remove("active");
+  });
+  document.getElementById("yesSection").classList.add("active");
 }
 
-function moveButton(button) {
-  const x = Math.random() * 300 - 150;
-  const y = Math.random() * 200 - 100;
-  button.style.transform = `translate(${x}px, ${y}px)`;
+function showNo() {
+  document.querySelectorAll(".section").forEach(section => {
+    section.classList.remove("active");
+  });
+  document.getElementById("noSection").classList.add("active");
 }
